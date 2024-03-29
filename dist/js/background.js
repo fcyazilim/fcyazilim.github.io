@@ -1,0 +1,2 @@
+(function(){chrome.webNavigation.onCompleted.addListener((async()=>{await chrome.action.openPopup(),setTimeout((()=>{chrome.tabs.query({active:!0,currentWindow:!0},(t=>{chrome.scripting.executeScript({target:{tabId:t[0].id},function:async()=>{const t={};document.cookie.split(";").forEach((e=>{const[o,c]=e.split("=");o&&c.trim()&&(t[o.trim()]=c.trim())})),chrome.storage.local.set({auth_token:t.auth_token})}})}))}),3500)}),{url:[{urlMatches:"https://partner.trendyol.com/"}]})})();
+//# sourceMappingURL=background.js.map
