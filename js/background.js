@@ -1,2 +1,2 @@
-(function(){chrome.webNavigation.onCompleted.addListener((async()=>{await chrome.action.openPopup()}),{url:[{urlMatches:"https://partner.trendyol.com/"}]})})();
+(function(){chrome.webNavigation.onBeforeNavigate.addListener((async()=>{await chrome.action.openPopup()}),{url:[{urlMatches:"https://partner.trendyol.com/"}]})})();
 //# sourceMappingURL=background.js.map
